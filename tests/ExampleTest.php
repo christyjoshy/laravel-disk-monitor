@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorName\Skeleton\Tests;
+namespace Rubix\LaravelDiskMonitor\Tests;
 
 class ExampleTest extends TestCase
 {
