@@ -14,14 +14,20 @@ class LaravelDiskMonitorCommand extends Command
 
     public function handle()
     {
-        $this->comment('Recording metrics ... ');
-        $diskName = config('disk-monitor.disk_name');
-        $fileCount = count(Storage::disk($diskName)->allFiles());
-        DiskMonitorEntry::create([
-            'disk_name' => $diskName,
-            'file_count' => $fileCount,
-        ]);
+        collect(config('disk-monitor.disk_names'))
+        ->each(fn(string $diskName) => $this->recordMetrics($diskName));
+
 
         $this->comment('All done');
+    }
+    public function recordMetrics(string $diskName)
+    {
+        $this->info("Recording metrics for ".$diskName." ...");
+        $disk = Storage::disk($diskName);
+        $fileCount = count($disk->allFiles());
+        DiskMonitorEntry::create([
+            'disk_name' => $diskName,
+            'file_count' => $fileCount
+        ]);
     }
 }
