@@ -6,14 +6,14 @@ use Rubix\LaravelDiskMonitor\Models\DiskMonitorEntry;
 use Rubix\LaravelDiskMonitor\Tests\TestCase;
 use Rubix\LaravelDiskMonitor\Commands\LaravelDiskMonitorCommand;
 
-class LaravelDiskMonitorCommandTest extends TestCase{
+class LaravelDiskMonitorCommandTest extends TestCase
+{
     public function setUp(): void
     {
         parent::setUp();
         Storage::fake('local');
     }
   
-    
     /** @test */
     public function it_will_record_zero_files_for_empty_disks()
     {
@@ -27,7 +27,4 @@ class LaravelDiskMonitorCommandTest extends TestCase{
         $this->assertEquals(1, $entry->file_count);
 
     }
-
 }
-
-?>
