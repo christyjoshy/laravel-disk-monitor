@@ -14,4 +14,3 @@ class DiskMetricsControllerTest extends TestCase
         $this->get('/test')->assertOk();
     }
 }
-?>

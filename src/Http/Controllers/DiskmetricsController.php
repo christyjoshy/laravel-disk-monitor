@@ -4,8 +4,8 @@ namespace Rubix\LaravelDiskMonitor\Http\Controllers;
 
 use Rubix\LaravelDiskMonitor\Models\DiskMonitorEntry;
 
-class DiskMetricsController{
-
+class DiskMetricsController
+{
     public function index()
     {
         //return 'ok';
@@ -14,8 +14,6 @@ class DiskMetricsController{
         // $entries->file_count = 1;
         // dd($entries);
 
-        return view('disk-monitor::entries',compact('entries'));
+        return view('disk-monitor::entries', compact('entries'));
     }
-   
 }
-?>
