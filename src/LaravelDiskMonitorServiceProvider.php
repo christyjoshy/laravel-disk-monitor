@@ -2,6 +2,7 @@
 
 namespace Rubix\LaravelDiskMonitor;
 
+use Illuminate\Support\Facades\Route;
 use Rubix\LaravelDiskMonitor\Commands\LaravelDiskMonitorCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
@@ -19,7 +20,8 @@ class LaravelDiskMonitorServiceProvider extends PackageServiceProvider
             ->name('laravel-disk-monitor')
             ->hasConfigFile()
             ->hasViews()
-            ->hasMigration('create_laravel-disk-monitor_table')
+            ->hasRoute('web')
+            ->hasMigration('create_laravel_disk_monitor_table')
             ->hasCommand(LaravelDiskMonitorCommand::class);
     }
 }
