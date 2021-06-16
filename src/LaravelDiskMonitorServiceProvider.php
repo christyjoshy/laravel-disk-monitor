@@ -2,14 +2,12 @@
 
 namespace Rubix\LaravelDiskMonitor;
 
-use Illuminate\Support\Facades\Route;
 use Rubix\LaravelDiskMonitor\Commands\LaravelDiskMonitorCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
 class LaravelDiskMonitorServiceProvider extends PackageServiceProvider
 {
-    
     public function configurePackage(Package $package): void
     {
         /*
