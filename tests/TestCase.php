@@ -31,6 +31,6 @@ class TestCase extends Orchestra
 
         
         include_once __DIR__.'/../database/migrations/create_disk_monitor_table.php.stub';
-        (new \CreateDiskMonitorTables())->up();
+        (new \CreateDiskMonitorTable())->up();
     }
 }

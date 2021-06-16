@@ -9,6 +9,7 @@ use Spatie\LaravelPackageTools\PackageServiceProvider;
 
 class LaravelDiskMonitorServiceProvider extends PackageServiceProvider
 {
+    
     public function configurePackage(Package $package): void
     {
         /*

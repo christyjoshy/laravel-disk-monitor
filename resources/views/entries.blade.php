@@ -7,13 +7,13 @@
     <th>Recorded At</th>
     </tr>
     </thead>
-        {{-- @foreach($entries as $entry)
+        @foreach($entries as $entry)
             <tr>
                 <td>{{ $entry->file_name }}</td>
                 <td>{{ $entry->file_count }}</td>
                 <td>{{ $entry->created_at->format('d-M-Y H:i:s') }}</td>
             </tr>
-        @endforeach --}}
+        @endforeach
     <tbody>
     </tbody>
 </table>
