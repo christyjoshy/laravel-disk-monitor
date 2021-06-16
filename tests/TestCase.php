@@ -4,6 +4,7 @@ namespace Rubix\LaravelDiskMonitor\Tests;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
+use Rubix\LaravelDiskMonitor\Http\Controllers\DiskMetricsController;
 use Rubix\LaravelDiskMonitor\LaravelDiskMonitorServiceProvider;
 
 class TestCase extends Orchestra
