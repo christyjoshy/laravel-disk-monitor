@@ -2,10 +2,9 @@
 
 namespace Rubix\LaravelDiskMonitor\Http\Controllers;
 
-use Illuminate\Routing\Controller;
 use Rubix\LaravelDiskMonitor\Models\DiskMonitorEntry;
 
-class DiskMetricsController extends Controller{
+class DiskMetricsController{
     public function __invoke()
     {
         $entries = DiskMonitorEntry::latest()->get();
