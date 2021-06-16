@@ -36,7 +36,7 @@ composer require rubix/laravel-disk-monitor
 You can publish and run the migrations with:
 
 ```bash
-php artisan vendor:publish --provider="Rubix\LaravelDiskMonitor\LaravelDiskMonitorServiceProvider" --tag="laravel-disk-monitor-migrations"
+php artisan vendor:publish --provider="Rubix\LaravelDiskMonitor\LaravelDiskMonitorServiceProvider" --tag="migrations"
 php artisan migrate
 ```
 
